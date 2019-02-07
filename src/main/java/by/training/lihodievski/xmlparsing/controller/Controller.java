@@ -40,9 +40,9 @@ public class Controller extends HttpServlet {
             InputStream streamXml = part.getInputStream ();
             parser.buildSetFlowers (streamXml);
             req.setAttribute ("flowers", parser.getFlowers ());
-            req.getRequestDispatcher ("view/result.jsp").forward (req, resp);
+            req.getRequestDispatcher ("WEB-INF/view/result.jsp").forward (req, resp);
         } catch (ParserConfigurationException | SAXException e) {
-            req.getRequestDispatcher ("view/error.jsp").forward (req,resp);
+            req.getRequestDispatcher ("WEB-INF/view/error.jsp").forward (req,resp);
         }
 
 

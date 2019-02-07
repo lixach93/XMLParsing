@@ -1,6 +1,5 @@
 <html>
 <body>
-
-<jsp:forward page="view/form.jsp"></jsp:forward>
+<jsp:forward page="WEB-INF/view/form.jsp"/>
 </body>
 </html>
