@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.example.com/flowers"
+        xsi:schemaLocation="http://www.example.com/flowers orangery.xsd">
+
+
+   <monocots-flower id="a1" soil="dirt">
+       <name>rose</name>
+       <origin>holland</origin>
+       <visual>
+           <leaf-color>q</leaf-color>
+           <stem-color>s</stem-color>
+           <length>1</length>
+       </visual>
+       <growing-tips>
+           <temperature>20</temperature>
+           <lighting>true</lighting>
+           <watering>5</watering>
+       </growing-tips>
+       <multiplying>leaf</multiplying>
+   </monocots-flower>
+
+    <dicotyledons-flower id="a2">
+        <name>qwert</name>
+        <origin>belarus</origin>
+        <visual>
+            <leaf-color>red</leaf-color>
+            <stem-color>blue</stem-color>
+            <length>5</length>
+        </visual>
+        <growing-tips>
+            <temperature>20</temperature>
+            <lighting>false</lighting>
+            <watering>-40</watering>
+        </growing-tips>
+        <multiplying>seed</multiplying>
+    </dicotyledons-flower>
+
+
+
+
+
+</flowers>
