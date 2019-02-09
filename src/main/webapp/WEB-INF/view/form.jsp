@@ -9,7 +9,7 @@
             <label class="radio-inline"><input type="radio" name="radios" value="stax">StAX-parser : </label>
             <div class="form-group">
                 <label for="exampleFormControlFile1">Choose file</label>
-                <input type="file" class="form-control-file" name="file" id="exampleFormControlFile1">
+                <input type="file" class="form-control-file" name="file" id="exampleFormControlFile1" required>
             </div>
             <button type="submit" class="btn btn-primary">Check</button>
         </form>

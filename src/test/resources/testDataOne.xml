@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.com/flowers"
+         xsi:schemaLocation="http://www.example.com/flowers /orangery.xsd">
+
+
+    <monocots-flower id="a6" soil="sod-podzolic">
+        <name>Vallota</name>
+        <origin>South Africa</origin>
+        <visual>
+            <leaf-color>Red</leaf-color>
+            <stem-color>Green</stem-color>
+            <length>60</length>
+        </visual>
+        <growing-tips>
+            <temperature>25</temperature>
+            <lighting>false</lighting>
+            <watering>90</watering>
+        </growing-tips>
+        <multiplying>seed</multiplying>
+        <firstMention>2000-10-20</firstMention>
+    </monocots-flower>
+
+    <monocots-flower id="a7" soil="dirt">
+        <name>Hedychium</name>
+        <origin>South Asia</origin>
+        <visual>
+            <leaf-color>Yellow</leaf-color>
+            <stem-color>Green</stem-color>
+            <length>45</length>
+        </visual>
+        <growing-tips>
+            <temperature>27</temperature>
+            <lighting>false</lighting>
+            <watering>105</watering>
+        </growing-tips>
+        <multiplying>leaf</multiplying>
+        <firstMention>2000-10-29</firstMention>
+    </monocots-flower>
+
+
+</flowers>

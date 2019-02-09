@@ -4,11 +4,7 @@
 <html>
     <jsp:include page="../fragments/header.jsp" />
 <body>
-    Sorry  this content does not load
-
-    <c:if test="${!requestScope.status}">
-        <h2>sorry</h2>
-        <a href="${pageContext.request.contextPath}/index">Back</a>
-    </c:if>
+    <h4>Sorry  this content does not load</h4>
+    <jsp:include page="../fragments/footer.jsp" />
 </body>
 </html>

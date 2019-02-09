@@ -29,4 +29,24 @@ public class Visual {
     public void setLength(int length) {
         this.length = length;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass () != o.getClass ()) return false;
+
+        Visual visual = (Visual) o;
+
+        if (length != visual.length) return false;
+        if (!leafColor.equals (visual.leafColor)) return false;
+        return stemColor.equals (visual.stemColor);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = leafColor.hashCode ();
+        result = 31 * result + stemColor.hashCode ();
+        result = 31 * result + length;
+        return result;
+    }
 }

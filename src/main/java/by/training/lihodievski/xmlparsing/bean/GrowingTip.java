@@ -29,4 +29,24 @@ public class GrowingTip {
     public void setWatering(int watering) {
         this.watering = watering;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass () != o.getClass ()) return false;
+
+        GrowingTip that = (GrowingTip) o;
+
+        if (temperature != that.temperature) return false;
+        if (lighting != that.lighting) return false;
+        return watering == that.watering;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = temperature;
+        result = 31 * result + (lighting ? 1 : 0);
+        result = 31 * result + watering;
+        return result;
+    }
 }

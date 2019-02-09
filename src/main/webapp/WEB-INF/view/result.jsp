@@ -9,15 +9,16 @@
                 <tr>
                     <th>Id</th>
                     <th>Soil</th>
-                    <th>name</th>
-                    <th>origin</th>
-                    <th>leafColor</th>
-                    <th>stemColor</th>
+                    <th>Name</th>
+                    <th>Origin</th>
+                    <th>Color leaf</th>
+                    <th>Color stem</th>
                     <th>Length</th>
                     <th>Temperature</th>
                     <th>Watering</th>
                     <th>Lighting</th>
                     <th>Multiplying</th>
+                    <th>First Mention</th>
                 </tr>
             </thead>
         <c:forEach var="flower" items="${flowers}">
@@ -34,16 +35,16 @@
                     <td><c:out value="${flower.growingTip.watering}"/></td>
                     <td><c:out value="${flower.growingTip.lighting}"/></td>
                     <td><c:out value="${flower.multiplying}"/></td>
+                    <td><c:out value="${flower.firstMention}"/></td>
                 </tr>
             </tbody>
-
         </c:forEach>
 </table>
     </c:if>
     <c:if test="${!requestScope.status}">
-        <h2>sorry</h2>
-        <a href="${pageContext.request.contextPath}/index">Back</a>
+        <h2 style="color:red"> This file is not valid !!! </h2>
+        <h3> Please , press XMLParsing label</h3>
     </c:if>
-
+    <jsp:include page="../fragments/footer.jsp" />
 </body>
 </html>

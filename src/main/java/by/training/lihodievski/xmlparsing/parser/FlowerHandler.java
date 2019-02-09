@@ -2,6 +2,7 @@ package by.training.lihodievski.xmlparsing.parser;
 
 
 import by.training.lihodievski.xmlparsing.bean.*;
+import by.training.lihodievski.xmlparsing.util.DateConvert;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -63,35 +64,38 @@ public class FlowerHandler extends DefaultHandler  {
     }
 
     public void characters(char[] ch, int start, int length) {
-        String s = new String (ch, start, length).trim ();
+        String currentElem = new String (ch, start, length).trim ();
         if (currentEnum != null) {
             switch (currentEnum) {
                 case NAME:
-                    current.setName (s);
+                    current.setName (currentElem);
                     break;
                 case ORIGIN:
-                    current.setOrigin (s);
+                    current.setOrigin (currentElem);
                     break;
                 case LEAF_COLOR:
-                    current.getVisual ().setLeafColor (s);
+                    current.getVisual ().setLeafColor (currentElem);
                     break;
                 case STEM_COLOR:
-                    current.getVisual ().setStemColor (s);
+                    current.getVisual ().setStemColor (currentElem);
                     break;
                 case LENGTH:
-                    current.getVisual ().setLength (Integer.parseInt (s));
+                    current.getVisual ().setLength (Integer.parseInt (currentElem));
+                    break;
+                case FIRSTMENTION:
+                    current.setFirstMention (DateConvert.convertDate (currentElem));
                     break;
                 case TEMPERATURE:
-                    current.getGrowingTip ().setTemperature (Integer.parseInt (s));
+                    current.getGrowingTip ().setTemperature (Integer.parseInt (currentElem));
                     break;
                 case LIGHTING:
-                    current.getGrowingTip().setLighting (Boolean.parseBoolean (s));
+                    current.getGrowingTip().setLighting (Boolean.parseBoolean (currentElem));
                     break;
                 case WATERING:
-                    current.getGrowingTip ().setWatering (Integer.parseInt (s));
+                    current.getGrowingTip ().setWatering (Integer.parseInt (currentElem));
                     break;
                 case MULTIPLYING:
-                    current.setMultiplying (Multiplying.fromValue (s));
+                    current.setMultiplying (Multiplying.fromValue (currentElem));
                     break;
                 default:
                     throw new EnumConstantNotPresentException (

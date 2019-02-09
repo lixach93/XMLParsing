@@ -24,4 +24,6 @@ public enum Multiplying {
         }
         throw new IllegalArgumentException(value);
     }
+
+
 }

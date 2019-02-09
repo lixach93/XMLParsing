@@ -1,5 +1,7 @@
 package by.training.lihodievski.xmlparsing.bean;
 
+import java.time.LocalDate;
+
 public class Flower {
 
     private String id;
@@ -7,6 +9,7 @@ public class Flower {
     private String name;
     private String origin;
     private Visual visual;
+    private LocalDate firstMention;
     private GrowingTip growingTip;
     private Multiplying multiplying;
 
@@ -47,6 +50,14 @@ public class Flower {
         this.origin = origin;
     }
 
+    public LocalDate getFirstMention() {
+        return firstMention;
+    }
+
+    public void setFirstMention(LocalDate firstMention) {
+        this.firstMention = firstMention;
+    }
+
     public Visual getVisual() {
         return visual;
     }
@@ -69,5 +80,36 @@ public class Flower {
 
     public void setMultiplying(Multiplying multiplying) {
         this.multiplying = multiplying;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass () != o.getClass ()) return false;
+
+        Flower flower = (Flower) o;
+
+        if (!id.equals (flower.id)) return false;
+        if (soil != flower.soil) return false;
+        if (!name.equals (flower.name)) return false;
+        if (!origin.equals (flower.origin)) return false;
+        if (!visual.equals (flower.visual)) return false;
+        if (!firstMention.equals (flower.firstMention)) return false;
+        if (!growingTip.equals (flower.growingTip)) return false;
+        return multiplying == flower.multiplying;
+    }
+
+
+    @Override
+    public int hashCode() {
+        int result = id.hashCode ();
+        result = 31 * result + soil.hashCode ();
+        result = 31 * result + name.hashCode ();
+        result = 31 * result + origin.hashCode ();
+        result = 31 * result + visual.hashCode ();
+        result = 31 * result + firstMention.hashCode ();
+        result = 31 * result + growingTip.hashCode ();
+        result = 31 * result + multiplying.hashCode ();
+        return result;
     }
 }

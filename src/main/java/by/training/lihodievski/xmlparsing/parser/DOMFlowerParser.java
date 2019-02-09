@@ -1,6 +1,7 @@
 package by.training.lihodievski.xmlparsing.parser;
 
 import by.training.lihodievski.xmlparsing.bean.*;
+import by.training.lihodievski.xmlparsing.util.DateConvert;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
@@ -14,6 +15,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.LocalDate;
 
 
 public class DOMFlowerParser extends AbstractFlowerParser {
@@ -50,6 +52,8 @@ public class DOMFlowerParser extends AbstractFlowerParser {
         }else {
             flower.setSoil (Soil.DIRT);
         }
+        LocalDate date = DateConvert.convertDate (getElementTextContent (flowerElement,"firstMention"));
+        flower.setFirstMention (date);
         flower.setId (flowerElement.getAttribute ("id"));
         flower.setName(getElementTextContent(flowerElement, "name"));
         flower.setOrigin (getElementTextContent(flowerElement, "origin"));

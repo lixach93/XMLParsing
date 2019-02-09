@@ -10,9 +10,18 @@ import javax.xml.parsers.ParserConfigurationException;
 
 public class ParserFactory {
 
+    private static final ParserFactory INSTANCE =  new ParserFactory ();
     private enum TypeParser {
         SAX, STAX, DOM
     }
+
+    private ParserFactory() {
+    }
+
+    public static ParserFactory getInstance() {
+        return INSTANCE;
+    }
+
     public AbstractFlowerParser createFlowerParser(String typeParser) throws ParserConfigurationException, SAXException {
         TypeParser type = TypeParser.valueOf(typeParser.toUpperCase());
         switch (type) {

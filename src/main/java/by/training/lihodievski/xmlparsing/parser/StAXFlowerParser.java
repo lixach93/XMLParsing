@@ -1,6 +1,7 @@
 package by.training.lihodievski.xmlparsing.parser;
 
 import by.training.lihodievski.xmlparsing.bean.*;
+import by.training.lihodievski.xmlparsing.util.DateConvert;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import javax.xml.stream.XMLInputFactory;
@@ -61,6 +62,9 @@ public class StAXFlowerParser extends AbstractFlowerParser {
                             break;
                         case ORIGIN:
                             flower.setOrigin (getXMLText (reader));
+                            break;
+                        case FIRSTMENTION:
+                            flower.setFirstMention (DateConvert.convertDate (getXMLText (reader)));
                             break;
                         case MULTIPLYING:
                             flower.setMultiplying (Multiplying.fromValue (getXMLText (reader)));

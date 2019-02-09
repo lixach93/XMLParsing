@@ -3,6 +3,8 @@ package by.training.lihodievski.xmlparsing.controller;
 import by.training.lihodievski.xmlparsing.factory.ParserFactory;
 import by.training.lihodievski.xmlparsing.parser.AbstractFlowerParser;
 import by.training.lihodievski.xmlparsing.validation.ValidatorXML;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
 
 import javax.servlet.ServletException;
@@ -20,6 +22,7 @@ import java.io.InputStream;
 @MultipartConfig
 public class Controller extends HttpServlet {
 
+    private static final Logger LOGGER = LogManager.getLogger (Controller.class);
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         processRequest(req,resp);
@@ -32,17 +35,21 @@ public class Controller extends HttpServlet {
 
     private void processRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String typeParser = req.getParameter ("radios");
-        try {
-            AbstractFlowerParser parser = new ParserFactory ().createFlowerParser (typeParser);
-            Part part = req.getPart ("file");
-            boolean status = ValidatorXML.validate (part.getInputStream ());
-            req.setAttribute ("status",status);
-            InputStream streamXml = part.getInputStream ();
-            parser.buildSetFlowers (streamXml);
-            req.setAttribute ("flowers", parser.getFlowers ());
+        Part part = req.getPart ("file");
+        boolean status = ValidatorXML.validate (part.getInputStream ());
+        req.setAttribute ("status", status);
+        if(status) {
+            try {
+                AbstractFlowerParser parser = ParserFactory.getInstance ().createFlowerParser (typeParser);
+                InputStream streamXml = part.getInputStream ();
+                parser.buildSetFlowers (streamXml);
+                req.setAttribute ("flowers", parser.getFlowers ());
+                req.getRequestDispatcher ("WEB-INF/view/result.jsp").forward (req, resp);
+            } catch (ParserConfigurationException | SAXException e) {
+                LOGGER.error ("error in controller", e);
+            }
+        }else{
             req.getRequestDispatcher ("WEB-INF/view/result.jsp").forward (req, resp);
-        } catch (ParserConfigurationException | SAXException e) {
-            req.getRequestDispatcher ("WEB-INF/view/error.jsp").forward (req,resp);
         }
 
 
