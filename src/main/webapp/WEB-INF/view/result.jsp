@@ -18,7 +18,7 @@
                     <th>Watering</th>
                     <th>Lighting</th>
                     <th>Multiplying</th>
-                    <th>First Mention</th>
+                    <th>Date landing</th>
                 </tr>
             </thead>
         <c:forEach var="flower" items="${flowers}">
@@ -35,7 +35,7 @@
                     <td><c:out value="${flower.growingTip.watering}"/></td>
                     <td><c:out value="${flower.growingTip.lighting}"/></td>
                     <td><c:out value="${flower.multiplying}"/></td>
-                    <td><c:out value="${flower.firstMention}"/></td>
+                    <td><c:out value="${flower.dateLanding}"/></td>
                 </tr>
             </tbody>
         </c:forEach>

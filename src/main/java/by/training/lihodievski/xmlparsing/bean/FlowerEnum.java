@@ -8,7 +8,7 @@ public enum FlowerEnum {
     ID("id"),
     SOIL("soil"),
     NAME("name"),
-    FIRSTMENTION("firstMention"),
+    DATE_LANDING("date-landing"),
     ORIGIN("origin"),
     MULTIPLYING("multiplying"),
     LEAF_COLOR("leaf-color"),

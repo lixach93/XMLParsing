@@ -5,7 +5,6 @@ import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;
-import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
@@ -26,7 +25,7 @@ public class ValidatorXML {
             Validator validator = schema.newValidator();
             validator.validate(new StreamSource (xml));
         } catch (IOException | SAXException e){
-            LOGGER.error("xml error", e);
+            LOGGER.error("Validator xml error", e);
             return false;
         }
         return true;

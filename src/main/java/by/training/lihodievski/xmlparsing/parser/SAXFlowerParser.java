@@ -1,14 +1,15 @@
 package by.training.lihodievski.xmlparsing.parser;
 
+import by.training.lihodievski.xmlparsing.exception.ParserException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
-
 import java.io.IOException;
 import java.io.InputStream;
+
 
 
 public class SAXFlowerParser extends AbstractFlowerParser {
@@ -17,11 +18,16 @@ public class SAXFlowerParser extends AbstractFlowerParser {
     private FlowerHandler flowerHandler;
     private XMLReader reader;
 
-    public SAXFlowerParser() throws SAXException {
+    public SAXFlowerParser() throws ParserException {
         super ();
         flowerHandler = new FlowerHandler ();
-        reader = XMLReaderFactory.createXMLReader ();
-        reader.setContentHandler (flowerHandler);
+        try {
+            reader = XMLReaderFactory.createXMLReader ();
+            reader.setContentHandler (flowerHandler);
+        } catch (SAXException e) {
+            LOGGER.error ("Sax Constructor exception",e);
+            throw new ParserException (e);
+        }
     }
 
     public void buildSetFlowers(InputStream fileName) {

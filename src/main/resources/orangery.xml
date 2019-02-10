@@ -18,7 +18,7 @@
            <watering>250</watering>
        </growing-tips>
        <multiplying>seed</multiplying>
-       <firstMention>2000-10-20</firstMention>
+       <date-landing>2019-01-20</date-landing>
    </monocots-flower>
     
     <monocots-flower id="a2">
@@ -35,7 +35,7 @@
             <watering>100</watering>
         </growing-tips>
         <multiplying>leaf</multiplying>
-        <firstMention>2000-10-20</firstMention>
+        <date-landing>2018-11-24</date-landing>
     </monocots-flower>
 
     <monocots-flower id="a3" soil="sod-podzolic">
@@ -52,7 +52,7 @@
             <watering>10</watering>
         </growing-tips>
         <multiplying>seed</multiplying>
-        <firstMention>2000-10-20</firstMention>
+        <date-landing>2017-04-15</date-landing>
     </monocots-flower>
 
     <monocots-flower id="a4" soil="dirt">
@@ -69,7 +69,7 @@
             <watering>70</watering>
         </growing-tips>
         <multiplying>leaf</multiplying>
-        <firstMention>2000-10-20</firstMention>
+        <date-landing>2018-04-27</date-landing>
     </monocots-flower>
 
     <monocots-flower id="a5" soil="podzolic">
@@ -86,7 +86,7 @@
             <watering>170</watering>
         </growing-tips>
         <multiplying>cutting</multiplying>
-        <firstMention>2000-10-20</firstMention>
+        <date-landing>2017-05-27</date-landing>
     </monocots-flower>
 
     <monocots-flower id="a6" soil="sod-podzolic">
@@ -103,7 +103,7 @@
             <watering>90</watering>
         </growing-tips>
         <multiplying>seed</multiplying>
-        <firstMention>2000-10-20</firstMention>
+        <date-landing>2016-12-31</date-landing>
     </monocots-flower>
 
     <monocots-flower id="a7" soil="dirt">
@@ -120,7 +120,7 @@
             <watering>105</watering>
         </growing-tips>
         <multiplying>leaf</multiplying>
-        <firstMention>2000-01-29</firstMention>
+        <date-landing>2018-01-24</date-landing>
     </monocots-flower>
 
     <monocots-flower id="a8" soil="dirt">
@@ -137,7 +137,7 @@
             <watering>85</watering>
         </growing-tips>
         <multiplying>leaf</multiplying>
-        <firstMention>1980-10-20</firstMention>
+        <date-landing>2016-04-14</date-landing>
     </monocots-flower>
 
     <dicotyledons-flower id="b1">
@@ -154,7 +154,7 @@
             <watering>145</watering>
         </growing-tips>
         <multiplying>seed</multiplying>
-        <firstMention>1970-12-22</firstMention>
+        <date-landing>2017-10-07</date-landing>
     </dicotyledons-flower>
 
     <dicotyledons-flower id="b2" soil="podzolic">
@@ -171,7 +171,7 @@
             <watering>185</watering>
         </growing-tips>
         <multiplying>leaf</multiplying>
-        <firstMention>1900-10-20</firstMention>
+        <date-landing>2018-03-21</date-landing>
     </dicotyledons-flower>
 
     <dicotyledons-flower id="b3">
@@ -188,7 +188,7 @@
             <watering>145</watering>
         </growing-tips>
         <multiplying>leaf</multiplying>
-        <firstMention>1480-10-20</firstMention>
+        <date-landing>2019-02-10</date-landing>
     </dicotyledons-flower>
 
     <dicotyledons-flower id="b4">
@@ -205,7 +205,7 @@
             <watering>250</watering>
         </growing-tips>
         <multiplying>seed</multiplying>
-        <firstMention>1780-10-20</firstMention>
+        <date-landing>2018-11-20</date-landing>
     </dicotyledons-flower>
 
     <dicotyledons-flower id="b5">
@@ -222,7 +222,7 @@
             <watering>75</watering>
         </growing-tips>
         <multiplying>cutting</multiplying>
-        <firstMention>1900-10-20</firstMention>
+        <date-landing>2016-08-20</date-landing>
     </dicotyledons-flower>
 
     <dicotyledons-flower id="b6">
@@ -239,7 +239,7 @@
             <watering>200</watering>
         </growing-tips>
         <multiplying>cutting</multiplying>
-        <firstMention>1900-10-20</firstMention>
+        <date-landing>2017-05-10</date-landing>
     </dicotyledons-flower>
 
     <dicotyledons-flower id="b7">
@@ -256,7 +256,24 @@
             <watering>180</watering>
         </growing-tips>
         <multiplying>cutting</multiplying>
-        <firstMention>1900-10-20</firstMention>
+        <date-landing>2015-03-23</date-landing>
+    </dicotyledons-flower>
+
+    <dicotyledons-flower id="b8" soil="podzolic">
+        <name>Sunflower</name>
+        <origin>Central America</origin>
+        <visual>
+            <leaf-color>Yellow</leaf-color>
+            <stem-color>Green</stem-color>
+            <length>500</length>
+        </visual>
+        <growing-tips>
+            <temperature>20</temperature>
+            <lighting>true</lighting>
+            <watering>500</watering>
+        </growing-tips>
+        <multiplying>seed</multiplying>
+        <date-landing>2018-12-12</date-landing>
     </dicotyledons-flower>
 
 </flowers>

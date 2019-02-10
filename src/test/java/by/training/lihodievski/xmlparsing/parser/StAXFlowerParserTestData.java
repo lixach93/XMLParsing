@@ -23,7 +23,7 @@ public class StAXFlowerParserTestData {
 
         Flower flowerOne =  new MonocotsFlower ();
         flowerOne.setId ("a6");
-        flowerOne.setFirstMention (LocalDate.of (2000,10,20));
+        flowerOne.setDateLanding (LocalDate.of (2000,10,20));
         flowerOne.setSoil (Soil.SOD_PODZOLIC);
         flowerOne.setName ("Vallota");
         flowerOne.setOrigin ("South Africa");
@@ -37,7 +37,7 @@ public class StAXFlowerParserTestData {
 
         Flower flowerTwo = new MonocotsFlower ();
         flowerTwo.setId ("a7");
-        flowerTwo.setFirstMention (LocalDate.of (2000,10,29));
+        flowerTwo.setDateLanding (LocalDate.of (2000,10,29));
         flowerTwo.setSoil (Soil.DIRT);
         flowerTwo.setName ("Hedychium");
         flowerTwo.setOrigin ("South Asia");
@@ -51,7 +51,7 @@ public class StAXFlowerParserTestData {
 
         Flower flowerThree =  new MonocotsFlower ();
         flowerThree.setId ("a1");
-        flowerThree.setFirstMention (LocalDate.of (2000,10,20));
+        flowerThree.setDateLanding (LocalDate.of (2000,10,20));
         flowerThree.setSoil (Soil.DIRT);
         flowerThree.setName ("Chlorophytum");
         flowerThree.setOrigin ("South Africa");
@@ -65,7 +65,7 @@ public class StAXFlowerParserTestData {
 
         Flower flowerFour =  new MonocotsFlower ();
         flowerFour.setId ("a2");
-        flowerFour.setFirstMention (LocalDate.of (2000,10,20));
+        flowerFour.setDateLanding (LocalDate.of (2000,10,20));
         flowerFour.setSoil (Soil.DIRT);
         flowerFour.setName ("Snowdrop");
         flowerFour.setOrigin ("Europe");
@@ -89,7 +89,7 @@ public class StAXFlowerParserTestData {
         flowerFive.getGrowingTip ().setLighting (true);
         flowerFive.getGrowingTip ().setTemperature (40);
         flowerFive.setMultiplying (Multiplying.SEED);
-        flowerFive.setFirstMention (LocalDate.of (1970,12,22));
+        flowerFive.setDateLanding (LocalDate.of (1970,12,22));
 
         Flower flowerSix = new DicotyledonsFlower ();
         flowerSix.setId ("b2");
@@ -103,7 +103,7 @@ public class StAXFlowerParserTestData {
         flowerSix.getGrowingTip ().setLighting (true);
         flowerSix.getGrowingTip ().setTemperature (15);
         flowerSix.setMultiplying (Multiplying.LEAF);
-        flowerSix.setFirstMention (LocalDate.of (1900,10,20));
+        flowerSix.setDateLanding (LocalDate.of (1900,10,20));
 
         Set<Flower> dataOne = new HashSet<> ();
         Set<Flower> dataTwo = new HashSet<> ();

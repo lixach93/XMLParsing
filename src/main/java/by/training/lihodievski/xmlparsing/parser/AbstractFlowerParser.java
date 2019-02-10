@@ -8,9 +8,9 @@ import java.util.Set;
 
 public abstract class AbstractFlowerParser {
 
-    Set<Flower> flowers;
+    protected Set<Flower> flowers;
 
-    AbstractFlowerParser() {
+    public AbstractFlowerParser() {
         this.flowers = new HashSet<> ();
     }
 

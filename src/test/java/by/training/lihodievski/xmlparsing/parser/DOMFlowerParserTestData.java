@@ -24,7 +24,7 @@ public class DOMFlowerParserTestData {
 
         Flower flowerOne =  new MonocotsFlower ();
         flowerOne.setId ("a6");
-        flowerOne.setFirstMention (LocalDate.of (2000,10,20));
+        flowerOne.setDateLanding (LocalDate.of (2000,10,20));
         flowerOne.setSoil (Soil.SOD_PODZOLIC);
         flowerOne.setName ("Vallota");
         flowerOne.setOrigin ("South Africa");
@@ -38,7 +38,7 @@ public class DOMFlowerParserTestData {
 
         Flower flowerTwo = new MonocotsFlower ();
         flowerTwo.setId ("a7");
-        flowerTwo.setFirstMention (LocalDate.of (2000,10,29));
+        flowerTwo.setDateLanding (LocalDate.of (2000,10,29));
         flowerTwo.setSoil (Soil.DIRT);
         flowerTwo.setName ("Hedychium");
         flowerTwo.setOrigin ("South Asia");
@@ -52,7 +52,7 @@ public class DOMFlowerParserTestData {
 
         Flower flowerThree =  new MonocotsFlower ();
         flowerThree.setId ("a1");
-        flowerThree.setFirstMention (LocalDate.of (2000,10,20));
+        flowerThree.setDateLanding (LocalDate.of (2000,10,20));
         flowerThree.setSoil (Soil.DIRT);
         flowerThree.setName ("Chlorophytum");
         flowerThree.setOrigin ("South Africa");
@@ -66,7 +66,7 @@ public class DOMFlowerParserTestData {
 
         Flower flowerFour =  new MonocotsFlower ();
         flowerFour.setId ("a2");
-        flowerFour.setFirstMention (LocalDate.of (2000,10,20));
+        flowerFour.setDateLanding (LocalDate.of (2000,10,20));
         flowerFour.setSoil (Soil.DIRT);
         flowerFour.setName ("Snowdrop");
         flowerFour.setOrigin ("Europe");

@@ -3,7 +3,6 @@
          xmlns="http://www.example.com/flowers"
          xsi:schemaLocation="http://www.example.com/flowers /orangery.xsd">
 
-
     <monocots-flower id="a6" soil="sod-podzolic">
         <name>Vallota</name>
         <origin>South Africa</origin>
@@ -18,7 +17,7 @@
             <watering>90</watering>
         </growing-tips>
         <multiplying>seed</multiplying>
-        <firstMention>2000-10-20</firstMention>
+        <date-landing>2000-10-20</date-landing>
     </monocots-flower>
 
     <monocots-flower id="a7" soil="dirt">
@@ -35,8 +34,7 @@
             <watering>105</watering>
         </growing-tips>
         <multiplying>leaf</multiplying>
-        <firstMention>2000-10-29</firstMention>
+        <date-landing>2000-10-29</date-landing>
     </monocots-flower>
-
 
 </flowers>

@@ -3,7 +3,6 @@ package by.training.lihodievski.xmlparsing.parser;
 import by.training.lihodievski.xmlparsing.bean.Flower;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.xml.sax.SAXException;
 
 import java.io.InputStream;
 import java.util.Set;

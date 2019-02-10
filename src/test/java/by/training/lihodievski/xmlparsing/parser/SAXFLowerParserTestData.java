@@ -1,10 +1,6 @@
 package by.training.lihodievski.xmlparsing.parser;
 
-import by.training.lihodievski.xmlparsing.bean.Flower;
-import by.training.lihodievski.xmlparsing.bean.MonocotsFlower;
-import by.training.lihodievski.xmlparsing.bean.Multiplying;
-import by.training.lihodievski.xmlparsing.bean.Soil;
-import com.sun.org.apache.xml.internal.resolver.readers.SAXCatalogParser;
+import by.training.lihodievski.xmlparsing.bean.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.DataProvider;
@@ -26,7 +22,7 @@ public class SAXFLowerParserTestData {
 
         Flower flowerOne =  new MonocotsFlower ();
         flowerOne.setId ("a6");
-        flowerOne.setFirstMention (LocalDate.of (2000,10,20));
+        flowerOne.setDateLanding (LocalDate.of (2000,10,20));
         flowerOne.setSoil (Soil.SOD_PODZOLIC);
         flowerOne.setName ("Vallota");
         flowerOne.setOrigin ("South Africa");
@@ -40,7 +36,7 @@ public class SAXFLowerParserTestData {
 
         Flower flowerTwo = new MonocotsFlower ();
         flowerTwo.setId ("a7");
-        flowerTwo.setFirstMention (LocalDate.of (2000,10,29));
+        flowerTwo.setDateLanding (LocalDate.of (2000,10,29));
         flowerTwo.setSoil (Soil.DIRT);
         flowerTwo.setName ("Hedychium");
         flowerTwo.setOrigin ("South Asia");
@@ -52,33 +48,33 @@ public class SAXFLowerParserTestData {
         flowerTwo.getGrowingTip ().setWatering (105);
         flowerTwo.setMultiplying (Multiplying.LEAF);
 
-        Flower flowerThree =  new MonocotsFlower ();
-        flowerThree.setId ("a1");
-        flowerThree.setFirstMention (LocalDate.of (2000,10,20));
+        Flower flowerThree = new DicotyledonsFlower ();
+        flowerThree.setId ("b1");
         flowerThree.setSoil (Soil.DIRT);
-        flowerThree.setName ("Chlorophytum");
-        flowerThree.setOrigin ("South Africa");
-        flowerThree.getVisual ().setLeafColor ("Green");
+        flowerThree.setName ("Iris");
+        flowerThree.setOrigin ("Holland");
+        flowerThree.getVisual ().setLeafColor ("White");
         flowerThree.getVisual ().setStemColor ("Green");
-        flowerThree.getVisual ().setLength (50);
+        flowerThree.getVisual ().setLength (40);
+        flowerThree.getGrowingTip ().setWatering (145);
         flowerThree.getGrowingTip ().setLighting (true);
-        flowerThree.getGrowingTip ().setTemperature (26);
-        flowerThree.getGrowingTip ().setWatering (250);
+        flowerThree.getGrowingTip ().setTemperature (40);
         flowerThree.setMultiplying (Multiplying.SEED);
+        flowerThree.setDateLanding (LocalDate.of (1970,12,22));
 
-        Flower flowerFour =  new MonocotsFlower ();
-        flowerFour.setId ("a2");
-        flowerFour.setFirstMention (LocalDate.of (2000,10,20));
-        flowerFour.setSoil (Soil.DIRT);
-        flowerFour.setName ("Snowdrop");
-        flowerFour.setOrigin ("Europe");
-        flowerFour.getVisual ().setLeafColor ("White");
-        flowerFour.getVisual ().setStemColor ("Dark green");
-        flowerFour.getVisual ().setLength (15);
-        flowerFour.getGrowingTip ().setLighting (false);
-        flowerFour.getGrowingTip ().setTemperature (-8);
-        flowerFour.getGrowingTip ().setWatering (100);
+        Flower flowerFour = new DicotyledonsFlower ();
+        flowerFour.setId ("b2");
+        flowerFour.setSoil (Soil.PODZOLIC);
+        flowerFour.setName ("Gerbera");
+        flowerFour.setOrigin ("Holland");
+        flowerFour.getVisual ().setLeafColor ("Red");
+        flowerFour.getVisual ().setStemColor ("Green");
+        flowerFour.getVisual ().setLength (60);
+        flowerFour.getGrowingTip ().setWatering (185);
+        flowerFour.getGrowingTip ().setLighting (true);
+        flowerFour.getGrowingTip ().setTemperature (15);
         flowerFour.setMultiplying (Multiplying.LEAF);
+        flowerFour.setDateLanding (LocalDate.of (1900,10,20));
 
         Set<Flower> dataOne = new HashSet<> ();
         Set<Flower> dataTwo = new HashSet<> ();
@@ -93,7 +89,7 @@ public class SAXFLowerParserTestData {
         InputStream streamTwo = null;
         try {
             Path path = Paths.get("src/test/resources/testDataOne.xml");
-            Path path2 = Paths.get("src/test/resources/testDataTwo.xml");
+            Path path2 = Paths.get("src/test/resources/testDataThree.xml");
             streamOne = Files.newInputStream (path);
             streamTwo = Files.newInputStream (path2);
         } catch (IOException e) {
@@ -107,7 +103,6 @@ public class SAXFLowerParserTestData {
                 {
                         dataTwo, streamTwo
                 }
-
         };
     }
 }

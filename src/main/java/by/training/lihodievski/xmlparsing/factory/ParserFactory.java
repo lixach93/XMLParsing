@@ -1,12 +1,10 @@
 package by.training.lihodievski.xmlparsing.factory;
 
+import by.training.lihodievski.xmlparsing.exception.ParserException;
 import by.training.lihodievski.xmlparsing.parser.AbstractFlowerParser;
 import by.training.lihodievski.xmlparsing.parser.DOMFlowerParser;
 import by.training.lihodievski.xmlparsing.parser.SAXFlowerParser;
 import by.training.lihodievski.xmlparsing.parser.StAXFlowerParser;
-import org.xml.sax.SAXException;
-
-import javax.xml.parsers.ParserConfigurationException;
 
 public class ParserFactory {
 
@@ -22,7 +20,7 @@ public class ParserFactory {
         return INSTANCE;
     }
 
-    public AbstractFlowerParser createFlowerParser(String typeParser) throws ParserConfigurationException, SAXException {
+    public AbstractFlowerParser createFlowerParser(String typeParser) throws ParserException {
         TypeParser type = TypeParser.valueOf(typeParser.toUpperCase());
         switch (type) {
             case DOM:

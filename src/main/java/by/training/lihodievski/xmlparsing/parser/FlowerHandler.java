@@ -82,8 +82,8 @@ public class FlowerHandler extends DefaultHandler  {
                 case LENGTH:
                     current.getVisual ().setLength (Integer.parseInt (currentElem));
                     break;
-                case FIRSTMENTION:
-                    current.setFirstMention (DateConvert.convertDate (currentElem));
+                case DATE_LANDING:
+                    current.setDateLanding (DateConvert.convertDate (currentElem));
                     break;
                 case TEMPERATURE:
                     current.getGrowingTip ().setTemperature (Integer.parseInt (currentElem));

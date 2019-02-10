@@ -63,8 +63,8 @@ public class StAXFlowerParser extends AbstractFlowerParser {
                         case ORIGIN:
                             flower.setOrigin (getXMLText (reader));
                             break;
-                        case FIRSTMENTION:
-                            flower.setFirstMention (DateConvert.convertDate (getXMLText (reader)));
+                        case DATE_LANDING:
+                            flower.setDateLanding (DateConvert.convertDate (getXMLText (reader)));
                             break;
                         case MULTIPLYING:
                             flower.setMultiplying (Multiplying.fromValue (getXMLText (reader)));

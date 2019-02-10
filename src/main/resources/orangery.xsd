@@ -19,7 +19,7 @@
             <element name="visual" type="tns:Visual"/>
             <element name="growing-tips" type="tns:Growing"/>
             <element name="multiplying" type="tns:Multiplying"/>
-            <element name="firstMention" type="date"/>
+            <element name="date-landing" type="date"/>
         </sequence>
         <attribute name="soil" type="tns:soil" use="optional" default="dirt"/>
         <attribute name="id" type="tns:Id" use="required"/>
@@ -85,7 +85,7 @@
     <simpleType name="Length">
         <restriction base="integer">
             <minInclusive value="1"/>
-            <maxInclusive value="200"/>
+            <maxInclusive value="500"/>
         </restriction>
     </simpleType>
     

@@ -3,7 +3,6 @@
          xmlns="http://www.example.com/flowers"
          xsi:schemaLocation="http://www.example.com/flowers /orangery.xsd">
 
-
     <dicotyledons-flower id="b1">
         <name>Iris</name>
         <origin>Holland</origin>
@@ -18,7 +17,7 @@
             <watering>145</watering>
         </growing-tips>
         <multiplying>seed</multiplying>
-        <firstMention>1970-12-22</firstMention>
+        <date-landing>1970-12-22</date-landing>
     </dicotyledons-flower>
 
     <dicotyledons-flower id="b2" soil="podzolic">
@@ -35,8 +34,7 @@
             <watering>185</watering>
         </growing-tips>
         <multiplying>leaf</multiplying>
-        <firstMention>1900-10-20</firstMention>
+        <date-landing>1900-10-20</date-landing>
     </dicotyledons-flower>
-
 
 </flowers>

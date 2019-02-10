@@ -5,6 +5,7 @@
     <jsp:include page="../fragments/header.jsp" />
 <body>
     <h4>Sorry  this content does not load</h4>
+    <h5> Please , press XMLParsing label</h5>
     <jsp:include page="../fragments/footer.jsp" />
 </body>
 </html>

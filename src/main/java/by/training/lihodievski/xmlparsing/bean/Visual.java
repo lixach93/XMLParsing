@@ -49,4 +49,13 @@ public class Visual {
         result = 31 * result + length;
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Visual{" +
+                "leafColor='" + leafColor + '\'' +
+                ", stemColor='" + stemColor + '\'' +
+                ", length=" + length +
+                '}';
+    }
 }

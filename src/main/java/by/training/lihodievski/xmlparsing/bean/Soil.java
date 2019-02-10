@@ -2,7 +2,6 @@ package by.training.lihodievski.xmlparsing.bean;
 
 public enum Soil {
 
-
     DIRT("dirt"),
     PODZOLIC("podzolic"),
     SOD_PODZOLIC("sod-podzolic");

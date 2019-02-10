@@ -9,7 +9,7 @@ public class Flower {
     private String name;
     private String origin;
     private Visual visual;
-    private LocalDate firstMention;
+    private LocalDate dateLanding;
     private GrowingTip growingTip;
     private Multiplying multiplying;
 
@@ -50,12 +50,12 @@ public class Flower {
         this.origin = origin;
     }
 
-    public LocalDate getFirstMention() {
-        return firstMention;
+    public LocalDate getDateLanding() {
+        return dateLanding;
     }
 
-    public void setFirstMention(LocalDate firstMention) {
-        this.firstMention = firstMention;
+    public void setDateLanding(LocalDate dateLanding) {
+        this.dateLanding = dateLanding;
     }
 
     public Visual getVisual() {
@@ -94,7 +94,7 @@ public class Flower {
         if (!name.equals (flower.name)) return false;
         if (!origin.equals (flower.origin)) return false;
         if (!visual.equals (flower.visual)) return false;
-        if (!firstMention.equals (flower.firstMention)) return false;
+        if (!dateLanding.equals (flower.dateLanding)) return false;
         if (!growingTip.equals (flower.growingTip)) return false;
         return multiplying == flower.multiplying;
     }
@@ -107,9 +107,23 @@ public class Flower {
         result = 31 * result + name.hashCode ();
         result = 31 * result + origin.hashCode ();
         result = 31 * result + visual.hashCode ();
-        result = 31 * result + firstMention.hashCode ();
+        result = 31 * result + dateLanding.hashCode ();
         result = 31 * result + growingTip.hashCode ();
         result = 31 * result + multiplying.hashCode ();
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Flower{" +
+                "id='" + id + '\'' +
+                ", soil=" + soil +
+                ", name='" + name + '\'' +
+                ", origin='" + origin + '\'' +
+                ", visual=" + visual +
+                ", dateLanding=" + dateLanding +
+                ", growingTip=" + growingTip +
+                ", multiplying=" + multiplying +
+                '}';
     }
 }

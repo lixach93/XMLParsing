@@ -49,4 +49,13 @@ public class GrowingTip {
         result = 31 * result + watering;
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "GrowingTip{" +
+                "temperature=" + temperature +
+                ", lighting=" + lighting +
+                ", watering=" + watering +
+                '}';
+    }
 }
